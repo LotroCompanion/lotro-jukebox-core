@@ -1,0 +1,19 @@
+package delta.lotro.jukebox.core.model;
+
+import junit.framework.TestCase;
+
+/**
+ * Test class for the sounds manager.
+ * @author DAM
+ */
+public class TestSoundsManager extends TestCase
+{
+  public void test()
+  {
+    SoundsManager sm=SoundsManager.getInstance();
+    for(SoundDescription sound : sm.getAllSounds())
+    {
+      System.out.println(sound);
+    }
+  }
+}
