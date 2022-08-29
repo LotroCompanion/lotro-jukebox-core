@@ -62,7 +62,7 @@ public final class LotroJukeboxCoreConfig
   private TypedProperties getLocations()
   {
     TypedProperties props=null;
-    URL url=URLTools.getFromClassPath("locations.properties", getClass().getClassLoader());
+    URL url=URLTools.getFromClassPath("locations-jukebox.properties", getClass().getClassLoader());
     InputStream is=null;
     try
     {
