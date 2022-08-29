@@ -66,13 +66,16 @@ public class SoundsXMLParser
     int duration=DOMParsingTools.getIntAttribute(attrs,SoundsXMLConstants.SOUND_SIZE_ATTR,0);
     sound.setDuration(duration);
     // Type
-    SoundType type=SoundType.COMBAT;
-    String typeStr=DOMParsingTools.getStringAttribute(attrs,SoundsXMLConstants.SOUND_TYPE_ATTR,null);
-    if (typeStr!=null)
+    String typesStr=DOMParsingTools.getStringAttribute(attrs,SoundsXMLConstants.SOUND_TYPE_ATTR,"");
+    if (typesStr.length()>0)
     {
-      type=SoundType.valueOf(typeStr);
+      String[] typeStrs=typesStr.split(",");
+      for(String typeStr : typeStrs)
+      {
+        SoundType type=SoundType.valueOf(typeStr);
+        sound.addType(type);
+      }
     }
-    sound.setType(type);
     return sound;
   }
 }

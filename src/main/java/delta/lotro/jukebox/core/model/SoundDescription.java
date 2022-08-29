@@ -1,5 +1,8 @@
 package delta.lotro.jukebox.core.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import delta.common.utils.id.Identifiable;
 import delta.lotro.jukebox.core.utils.Duration;
 
@@ -15,7 +18,7 @@ public class SoundDescription implements Identifiable
   private SoundFormat _format;
   private long _rawSize;
   private int _duration;
-  private SoundType _type;
+  private Set<SoundType> _types;
 
   /**
    * Constructor.
@@ -29,7 +32,7 @@ public class SoundDescription implements Identifiable
     _format=SoundFormat.OGG_VORBIS;
     _rawSize=0;
     _duration=0;
-    _type=SoundType.MUSIC;
+    _types=new HashSet<SoundType>();
   }
 
   /**
@@ -136,21 +139,21 @@ public class SoundDescription implements Identifiable
   }
 
   /**
-   * Get the sound type.
-   * @return a sound type.
+   * Get the sound types.
+   * @return a sound types.
    */
-  public SoundType getType()
+  public Set<SoundType> getTypes()
   {
-    return _type;
+    return _types;
   }
 
   /**
    * Set the sound type.
    * @param type the type to set.
    */
-  public void setType(SoundType type)
+  public void addType(SoundType type)
   {
-    _type=type;
+    _types.add(type);
   }
 
   @Override
@@ -162,9 +165,9 @@ public class SoundDescription implements Identifiable
     {
       sb.append(", name=").append(_name);
     }
-    if (_type!=null)
+    if (!_types.isEmpty())
     {
-      sb.append(", type=").append(_type);
+      sb.append(", types=").append(_types);
     }
     if (_duration!=0)
     {

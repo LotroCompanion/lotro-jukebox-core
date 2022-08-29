@@ -3,6 +3,7 @@ package delta.lotro.jukebox.core.model.io.xml;
 import java.io.File;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 import javax.xml.transform.sax.TransformerHandler;
 
@@ -92,9 +93,30 @@ public class SoundsXMLWriter
     int duration=sound.getDuration();
     attrs.addAttribute("","",SoundsXMLConstants.SOUND_DURATION_ATTR,XmlWriter.CDATA,String.valueOf(duration));
     // Type
-    SoundType type=sound.getType();
-    attrs.addAttribute("","",SoundsXMLConstants.SOUND_TYPE_ATTR,XmlWriter.CDATA,type.name());
+    String types=getSoundTypesStr(sound.getTypes());
+    attrs.addAttribute("","",SoundsXMLConstants.SOUND_TYPE_ATTR,XmlWriter.CDATA,types);
     hd.startElement("","",SoundsXMLConstants.SOUND_TAG,attrs);
     hd.endElement("","",SoundsXMLConstants.SOUND_TAG);
+  }
+
+  private String getSoundTypesStr(Set<SoundType> types)
+  {
+    if (types.isEmpty())
+    {
+      return "";
+    }
+    StringBuilder sb=new StringBuilder();
+    for(SoundType type : SoundType.values())
+    {
+      if (types.contains(type))
+      {
+        if (sb.length()>0)
+        {
+          sb.append(',');
+        }
+        sb.append(type.name());
+      }
+    }
+    return sb.toString();
   }
 }
