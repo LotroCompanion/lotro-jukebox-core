@@ -40,6 +40,10 @@ public class SoundsXMLConstants
    */
   public static final String SOUND_DURATION_ATTR="duration";
   /**
+   * Tag 'sound', attribute 'sampleRate'.
+   */
+  public static final String SOUND_SAMPLE_RATE_ATTR="sampleRate";
+  /**
    * Tag 'sound', attribute 'type'.
    */
   public static final String SOUND_TYPE_ATTR="type";

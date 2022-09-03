@@ -65,6 +65,9 @@ public class SoundsXMLParser
     // Duration
     int duration=DOMParsingTools.getIntAttribute(attrs,SoundsXMLConstants.SOUND_SIZE_ATTR,0);
     sound.setDuration(duration);
+    // Sample rate
+    float sampleRate=DOMParsingTools.getFloatAttribute(attrs,SoundsXMLConstants.SOUND_SAMPLE_RATE_ATTR,0);
+    sound.setSampleRate(sampleRate);
     // Type
     String typesStr=DOMParsingTools.getStringAttribute(attrs,SoundsXMLConstants.SOUND_TYPE_ATTR,"");
     if (typesStr.length()>0)

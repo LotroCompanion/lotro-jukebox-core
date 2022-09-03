@@ -18,6 +18,7 @@ public class SoundDescription implements Identifiable
   private SoundFormat _format;
   private long _rawSize;
   private int _duration;
+  private float _sampleRate;
   private Set<SoundType> _types;
 
   /**
@@ -32,6 +33,7 @@ public class SoundDescription implements Identifiable
     _format=SoundFormat.OGG_VORBIS;
     _rawSize=0;
     _duration=0;
+    _sampleRate=0;
     _types=new HashSet<SoundType>();
   }
 
@@ -136,6 +138,24 @@ public class SoundDescription implements Identifiable
   public void setDuration(int duration)
   {
     _duration=duration;
+  }
+
+  /**
+   * Get the sample rate.
+   * @return a sample rate (Hz).
+   */
+  public float getSampleRate()
+  {
+    return _sampleRate;
+  }
+
+  /**
+   * Set the sample rate of this sound.
+   * @param sampleRate the sample rate to set (Hz).
+   */
+  public void setSampleRate(float sampleRate)
+  {
+    _sampleRate=sampleRate;
   }
 
   /**

@@ -92,6 +92,9 @@ public class SoundsXMLWriter
     // Duration
     int duration=sound.getDuration();
     attrs.addAttribute("","",SoundsXMLConstants.SOUND_DURATION_ATTR,XmlWriter.CDATA,String.valueOf(duration));
+    // Sample rate
+    float sampleRate=sound.getSampleRate();
+    attrs.addAttribute("","",SoundsXMLConstants.SOUND_SAMPLE_RATE_ATTR,XmlWriter.CDATA,String.valueOf(sampleRate));
     // Type
     String types=getSoundTypesStr(sound.getTypes());
     attrs.addAttribute("","",SoundsXMLConstants.SOUND_TYPE_ATTR,XmlWriter.CDATA,types);
