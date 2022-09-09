@@ -25,7 +25,7 @@ public class SoundFormatFilter implements Filter<SoundDescription>
    * Get the format to use.
    * @return A format or <code>null</code>.
    */
-  public SoundFormat getCategory()
+  public SoundFormat getFormat()
   {
     return _format;
   }
@@ -34,7 +34,7 @@ public class SoundFormatFilter implements Filter<SoundDescription>
    * Set the format to select.
    * @param format Format to use, may be <code>null</code>.
    */
-  public void setCategory(SoundFormat format)
+  public void setFormat(SoundFormat format)
   {
     _format=format;
   }
