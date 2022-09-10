@@ -9,9 +9,22 @@ public enum SoundFormat
   /**
    * Ogg+Vorbis.
    */
-  OGG_VORBIS,
+  OGG_VORBIS("Orgg Vorbis"),
   /**
    * WAV.
    */
-  WAV
+  WAV("WAV");
+
+  private String _label;
+
+  private SoundFormat(String label)
+  {
+    _label=label;
+  }
+
+  @Override
+  public String toString()
+  {
+    return _label;
+  }
 }
