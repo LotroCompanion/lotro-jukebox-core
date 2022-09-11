@@ -9,7 +9,7 @@ public enum SoundFormat
   /**
    * Ogg+Vorbis.
    */
-  OGG_VORBIS("Orgg Vorbis"),
+  OGG_VORBIS("Ogg Vorbis"),
   /**
    * WAV.
    */
