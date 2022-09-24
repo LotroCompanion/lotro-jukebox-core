@@ -63,7 +63,7 @@ public class SoundsXMLParser
     long size=DOMParsingTools.getLongAttribute(attrs,SoundsXMLConstants.SOUND_SIZE_ATTR,0);
     sound.setRawSize(size);
     // Duration
-    int duration=DOMParsingTools.getIntAttribute(attrs,SoundsXMLConstants.SOUND_SIZE_ATTR,0);
+    int duration=DOMParsingTools.getIntAttribute(attrs,SoundsXMLConstants.SOUND_DURATION_ATTR,0);
     sound.setDuration(duration);
     // Sample rate
     float sampleRate=DOMParsingTools.getFloatAttribute(attrs,SoundsXMLConstants.SOUND_SAMPLE_RATE_ATTR,0);
