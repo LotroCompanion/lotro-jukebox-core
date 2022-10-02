@@ -191,7 +191,7 @@ public class SoundDescription implements Identifiable
     }
     if (_duration!=0)
     {
-      sb.append(", duration=").append(Duration.getDurationString(_duration));
+      sb.append(", duration=").append(Duration.getDurationString(_duration/1000));
     }
     return sb.toString();
   }
