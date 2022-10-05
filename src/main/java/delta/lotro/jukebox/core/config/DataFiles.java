@@ -18,4 +18,8 @@ public class DataFiles
    * Sounds description file.
    */
   public static final String SOUNDS="sounds";
+  /**
+   * Sound context: music items.
+   */
+  public static final String MUSIC_ITEMS="musicItems";
 }

@@ -3,10 +3,10 @@ package delta.lotro.jukebox.core.model;
 import delta.common.utils.id.Identifiable;
 
 /**
- * Description of a music item.
+ * Description of a sound context (area, dungeon, music item...).
  * @author DAM
  */
-public class MusicItem implements Identifiable
+public class SoundContext implements Identifiable
 {
   private int _id;
   private String _name;
@@ -19,7 +19,7 @@ public class MusicItem implements Identifiable
    * @param name Item name.
    * @param icon Item icon.
    */
-  public MusicItem(int id, String name, String icon)
+  public SoundContext(int id, String name, String icon)
   {
     _id=id;
     _name=name;
