@@ -22,4 +22,16 @@ public class DataFiles
    * Sound context: music items.
    */
   public static final String MUSIC_ITEMS="musicItems";
+  /**
+   * Sound context: instruments.
+   */
+  public static final String INSTRUMENTS="instruments";
+  /**
+   * Sound context: areas.
+   */
+  public static final String AREAS="areas";
+  /**
+   * Sound context: dungeons.
+   */
+  public static final String DUNGEONS="dungeons";
 }

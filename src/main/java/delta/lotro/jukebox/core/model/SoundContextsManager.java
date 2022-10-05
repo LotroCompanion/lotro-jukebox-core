@@ -11,10 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import delta.common.utils.id.IdentifiableComparator;
-import delta.lotro.jukebox.core.config.DataFiles;
-import delta.lotro.jukebox.core.config.LotroJukeboxCoreConfig;
 import delta.lotro.jukebox.core.model.io.xml.SoundContextsXMLParser;
-import delta.lotro.jukebox.core.model.io.xml.SoundsXMLParser;
 
 /**
  * Sound contexts manager.

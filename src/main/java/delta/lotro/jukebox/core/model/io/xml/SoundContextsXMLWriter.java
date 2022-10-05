@@ -91,7 +91,10 @@ public class SoundContextsXMLWriter
     attrs.addAttribute("","",SoundContextsXMLConstants.CONTEXT_NAME_ATTR,XmlWriter.CDATA,name);
     // Icon
     String icon=soundContext.getIcon();
-    attrs.addAttribute("","",SoundContextsXMLConstants.CONTEXT_ICON_ATTR,XmlWriter.CDATA,icon);
+    if (icon!=null)
+    {
+      attrs.addAttribute("","",SoundContextsXMLConstants.CONTEXT_ICON_ATTR,XmlWriter.CDATA,icon);
+    }
     hd.startElement("","",_contextTag,attrs);
     // Sound references
     SoundReferences references=soundContext.getSounds();

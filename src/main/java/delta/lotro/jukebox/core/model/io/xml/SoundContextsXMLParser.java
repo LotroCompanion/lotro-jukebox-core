@@ -10,10 +10,8 @@ import org.w3c.dom.NamedNodeMap;
 import delta.common.utils.xml.DOMParsingTools;
 import delta.lotro.jukebox.core.model.SoundContext;
 import delta.lotro.jukebox.core.model.SoundDescription;
-import delta.lotro.jukebox.core.model.SoundFormat;
 import delta.lotro.jukebox.core.model.SoundReference;
 import delta.lotro.jukebox.core.model.SoundReferences;
-import delta.lotro.jukebox.core.model.SoundType;
 import delta.lotro.jukebox.core.model.SoundsManager;
 
 /**
