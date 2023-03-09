@@ -8,6 +8,9 @@ import junit.framework.TestCase;
  */
 public class TestSoundsManager extends TestCase
 {
+  /**
+   * Test the sounds manager.
+   */
   public void test()
   {
     SoundsManager sm=SoundsManager.getInstance();
