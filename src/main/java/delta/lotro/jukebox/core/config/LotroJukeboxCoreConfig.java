@@ -8,8 +8,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import delta.common.utils.io.StreamTools;
+import delta.common.utils.misc.Preferences;
 import delta.common.utils.misc.TypedProperties;
 import delta.common.utils.url.URLTools;
+import delta.lotro.jukebox.core.config.labels.LabelsConfiguration;
 
 /**
  * Configuration.
@@ -26,8 +28,15 @@ public final class LotroJukeboxCoreConfig
 
   // Root directory for user data
   private File _userDataDir;
+
   // Parameters
   private TypedProperties _parameters;
+
+  // Preferences
+  private Preferences _preferences;
+
+  // Labels Configuration
+  private LabelsConfiguration _labelsConfiguration;
 
   /**
    * Get the sole instance of this class.
@@ -57,6 +66,11 @@ public final class LotroJukeboxCoreConfig
     File userHomeDir=new File(System.getProperty("user.home"));
     File userApplicationDir=new File(userHomeDir,".lotrojukebox");
     _userDataDir=new File(userApplicationDir,"data");
+    // Preferences
+    File preferencesDir=new File(_userDataDir,"preferences");
+    _preferences=new Preferences(preferencesDir);
+    // Labels Configuration
+    _labelsConfiguration=initLabelsConfiguration();
   }
 
   private TypedProperties getLocations()
@@ -101,6 +115,22 @@ public final class LotroJukeboxCoreConfig
     return _parameters;
   }
 
+  private LabelsConfiguration initLabelsConfiguration()
+  {
+    LabelsConfiguration cfg=new LabelsConfiguration();
+    cfg.fromPreferences(_preferences);
+    return cfg;
+  }
+
+  /**
+   * Get the preferences manager.
+   * @return the preferences manager.
+   */
+  public Preferences getPreferences()
+  {
+    return _preferences;
+  }
+
   /**
    * Get the directory for user data.
    * @return the directory for user data.
@@ -108,5 +138,14 @@ public final class LotroJukeboxCoreConfig
   public File getUserDataDir()
   {
     return _userDataDir;
+  }
+
+  /**
+   * Get the labels configuration.
+   * @return the labels configuration.
+   */
+  public LabelsConfiguration getLabelsConfiguration()
+  {
+    return _labelsConfiguration;
   }
 }
