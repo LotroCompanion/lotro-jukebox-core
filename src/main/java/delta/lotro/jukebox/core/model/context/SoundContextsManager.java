@@ -1,17 +1,12 @@
 package delta.lotro.jukebox.core.model.context;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import delta.common.utils.id.IdentifiableComparator;
-import delta.lotro.jukebox.core.model.context.io.xml.SoundContextsXMLParser;
 
 /**
  * Sound contexts manager.
@@ -19,8 +14,6 @@ import delta.lotro.jukebox.core.model.context.io.xml.SoundContextsXMLParser;
  */
 public class SoundContextsManager
 {
-  private static final Logger LOGGER=LoggerFactory.getLogger(SoundContextsManager.class);
-
   private Map<Integer,SoundContext> _soundContexts;
 
   /**
@@ -29,28 +22,6 @@ public class SoundContextsManager
   public SoundContextsManager()
   {
     _soundContexts=new HashMap<Integer,SoundContext>();
-  }
-
-  /**
-   * Load data from a file.
-   * @param from File to read from.
-   * @param contextTag Context tag to use.
-   * @return the loaded data.
-   */
-  public static SoundContextsManager load(File from, String contextTag)
-  {
-    long now=System.currentTimeMillis();
-    SoundContextsManager mgr=new SoundContextsManager();
-    List<SoundContext> soundContexts=new SoundContextsXMLParser(contextTag).parseXML(from);
-    for(SoundContext soundContext : soundContexts)
-    {
-      mgr.registerSoundContext(soundContext);
-    }
-    long now2=System.currentTimeMillis();
-    long duration=now2-now;
-    int nbContexts=mgr.getAllSoundContexts().size();
-    LOGGER.info("Loaded "+nbContexts+" contexts in "+duration+"ms.");
-    return mgr;
   }
 
   /**

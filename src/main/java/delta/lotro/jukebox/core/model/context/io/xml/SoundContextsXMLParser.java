@@ -20,17 +20,6 @@ import delta.lotro.jukebox.core.model.context.SoundReferences;
  */
 public class SoundContextsXMLParser
 {
-  private String _contextTag;
-
-  /**
-   * Constructor.
-   * @param contextTag Context tag.
-   */
-  public SoundContextsXMLParser(String contextTag)
-  {
-    _contextTag=contextTag;
-  }
-
   /**
    * Parse the XML file.
    * @param source Source file.
@@ -42,7 +31,7 @@ public class SoundContextsXMLParser
     Element root=DOMParsingTools.parse(source);
     if (root!=null)
     {
-      List<Element> contextTags=DOMParsingTools.getChildTagsByName(root,_contextTag);
+      List<Element> contextTags=DOMParsingTools.getChildTags(root);
       for(Element contextTag : contextTags)
       {
         SoundContext sound=parseSoundContext(contextTag);
