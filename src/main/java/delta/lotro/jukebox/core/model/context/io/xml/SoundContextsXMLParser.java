@@ -1,4 +1,4 @@
-package delta.lotro.jukebox.core.model.io.xml;
+package delta.lotro.jukebox.core.model.context.io.xml;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -8,11 +8,11 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 
 import delta.common.utils.xml.DOMParsingTools;
-import delta.lotro.jukebox.core.model.SoundContext;
-import delta.lotro.jukebox.core.model.SoundDescription;
-import delta.lotro.jukebox.core.model.SoundReference;
-import delta.lotro.jukebox.core.model.SoundReferences;
-import delta.lotro.jukebox.core.model.SoundsManager;
+import delta.lotro.jukebox.core.model.base.SoundDescription;
+import delta.lotro.jukebox.core.model.base.SoundsManager;
+import delta.lotro.jukebox.core.model.context.SoundContext;
+import delta.lotro.jukebox.core.model.context.SoundReference;
+import delta.lotro.jukebox.core.model.context.SoundReferences;
 
 /**
  * Parser for sounds stored in XML.

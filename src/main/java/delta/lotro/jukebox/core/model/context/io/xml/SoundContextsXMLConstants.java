@@ -1,4 +1,4 @@
-package delta.lotro.jukebox.core.model.io.xml;
+package delta.lotro.jukebox.core.model.context.io.xml;
 
 /**
  * Constants for tags and attribute names used in the

@@ -1,8 +1,8 @@
-package delta.lotro.jukebox.core.model.filter;
+package delta.lotro.jukebox.core.model.base.filter;
 
 import delta.common.utils.collections.filters.Filter;
-import delta.lotro.jukebox.core.model.SoundDescription;
-import delta.lotro.jukebox.core.model.SoundFormat;
+import delta.lotro.jukebox.core.model.base.SoundDescription;
+import delta.lotro.jukebox.core.model.base.SoundFormat;
 
 /**
  * Filter for sound of a given format.

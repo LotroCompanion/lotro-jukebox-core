@@ -1,9 +1,9 @@
-package delta.lotro.jukebox.core.model.filter;
+package delta.lotro.jukebox.core.model.base.filter;
 
 import delta.common.utils.collections.filters.Filter;
 import delta.common.utils.text.MatchType;
 import delta.common.utils.text.StringFilter;
-import delta.lotro.jukebox.core.model.SoundDescription;
+import delta.lotro.jukebox.core.model.base.SoundDescription;
 
 /**
  * Filter for sound name.

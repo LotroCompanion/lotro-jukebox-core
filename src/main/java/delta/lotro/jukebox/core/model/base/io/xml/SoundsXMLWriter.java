@@ -1,4 +1,4 @@
-package delta.lotro.jukebox.core.model.io.xml;
+package delta.lotro.jukebox.core.model.base.io.xml;
 
 import java.io.File;
 import java.util.Collections;
@@ -14,9 +14,9 @@ import delta.common.utils.id.IdentifiableComparator;
 import delta.common.utils.io.xml.XmlFileWriterHelper;
 import delta.common.utils.io.xml.XmlWriter;
 import delta.common.utils.text.EncodingNames;
-import delta.lotro.jukebox.core.model.SoundDescription;
-import delta.lotro.jukebox.core.model.SoundFormat;
-import delta.lotro.jukebox.core.model.SoundType;
+import delta.lotro.jukebox.core.model.base.SoundDescription;
+import delta.lotro.jukebox.core.model.base.SoundFormat;
+import delta.lotro.jukebox.core.model.base.SoundType;
 
 /**
  * Writes sounds to XML files.

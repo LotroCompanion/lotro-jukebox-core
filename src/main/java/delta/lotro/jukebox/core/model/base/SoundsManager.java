@@ -1,4 +1,4 @@
-package delta.lotro.jukebox.core.model;
+package delta.lotro.jukebox.core.model.base;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 import delta.common.utils.id.IdentifiableComparator;
 import delta.lotro.jukebox.core.config.DataFiles;
 import delta.lotro.jukebox.core.config.LotroJukeboxCoreConfig;
-import delta.lotro.jukebox.core.model.io.xml.SoundsXMLParser;
+import delta.lotro.jukebox.core.model.base.io.xml.SoundsXMLParser;
 
 /**
  * Sounds manager.

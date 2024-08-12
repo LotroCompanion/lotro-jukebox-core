@@ -1,4 +1,4 @@
-package delta.lotro.jukebox.core.model;
+package delta.lotro.jukebox.core.model.base;
 
 /**
  * Sound format.

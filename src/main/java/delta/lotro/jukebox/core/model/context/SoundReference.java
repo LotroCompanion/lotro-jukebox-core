@@ -1,6 +1,7 @@
-package delta.lotro.jukebox.core.model;
+package delta.lotro.jukebox.core.model.context;
 
 import delta.common.utils.id.Identifiable;
+import delta.lotro.jukebox.core.model.base.SoundDescription;
 
 /**
  * Sound reference.

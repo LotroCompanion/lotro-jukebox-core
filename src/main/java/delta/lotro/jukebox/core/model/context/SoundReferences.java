@@ -1,4 +1,4 @@
-package delta.lotro.jukebox.core.model;
+package delta.lotro.jukebox.core.model.context;
 
 import java.util.ArrayList;
 import java.util.List;
