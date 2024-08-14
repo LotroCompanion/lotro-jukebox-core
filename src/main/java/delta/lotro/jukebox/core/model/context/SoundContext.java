@@ -1,12 +1,13 @@
 package delta.lotro.jukebox.core.model.context;
 
 import delta.common.utils.id.Identifiable;
+import delta.lotro.jukebox.core.utils.Named;
 
 /**
  * Description of a sound context (area, dungeon, music item...).
  * @author DAM
  */
-public class SoundContext implements Identifiable
+public class SoundContext implements Identifiable,Named
 {
   private int _id;
   private String _name;
